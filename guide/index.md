@@ -34,19 +34,13 @@ assumptions about the nature of the media being played, such as how the media da
 how it is buffered or its format. You inject this functionality through ExoPlayer’s {@code
 prepare()} method in the form of {@code TrackRenderer} objects.
 
-ExoPlayer provides default {@code TrackRenderer} implementations for audio and
+ExoPlayer provides default {% highlight java %}TrackRenderer{% endhighlight %} implementations for audio and
 video, which make use of the {@link android.media.MediaCodec} and {@link android.media.AudioTrack}
 classes in the Android framework. Both renderers require a {@code SampleSource} object, from which
 they obtain individual media samples for playback. Figure 1 shows the high level object model for
 an ExoPlayer implementation configured to play audio and video using these components.
 
 ## TrackRenderer ##
-
-etc
-
-The start...!
-
-{% sdk_link Test %}
 
 {% highlight java %}
 // 1. Instantiate the player.
@@ -65,4 +59,7 @@ player.setPlayWhenReady(true);
 player.release(); // Don’t forget to release when done!
 {% endhighlight %}
 
-The end!
+## Link tests ##
+
+<a href="{{ site.sdkurl }}/android/media/MediaCodec.html">MediaCodec</a>
+[MediaCodec]({{ site.sdkurl }}/android/media/MediaCodec.html)
